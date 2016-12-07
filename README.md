@@ -5,7 +5,7 @@ The same will be used in the project of **Predicting Housing Prices** having num
 
 To learn about Linear Regression, check out **Andrew NG's** course videos on Machine Learning : https://www.coursera.org/learn/machine-learning/lecture/6Nj1q/multiple-features  
 
-**Project Details**
+## Project Details
 
 There are N feature variables of M training input data. For each of the M training input data, there are M training output data ( prize of the house ).
 
