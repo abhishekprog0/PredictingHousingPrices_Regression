@@ -17,9 +17,9 @@ int main()
 	r(i,0,n+1)
 		p[i]=-1.1;	
 	float s1=0,s2=0;
-	float alpha = 0.01; //alpha = learning rate		
+	float alpha = 0.1; //alpha = learning rate		
 	//linear regression using gradient descent
-	cout<< "Iterations for parameters: "<<endl;
+	//cout<< "Iterations for parameters: "<<endl;
 	//cout<<"m         c"<<endl;		
 	while(l<100)
 	{
