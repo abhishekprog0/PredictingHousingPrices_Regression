@@ -36,7 +36,7 @@ int main()
 	r(i,0,n+1)
 		p[i]=-1.1;	
 	float alpha = 0.01; //alpha = learning rate		
-	//linear regression using gradient descent
+	//linear regression using gradient descent learning algorithm
 	while(abs(cf - v)>0.0001)
 	{
 		v=cf;
@@ -54,8 +54,8 @@ int main()
 			cf = cf / (2 * m);
 			p[k]=p[k] - ((alpha/m)*s2);
 		}
-		l++;
 	}
+	//input for prediction data
 	cin>>h;
 	float pred[h][n+1];
 	r(i,0,h)
