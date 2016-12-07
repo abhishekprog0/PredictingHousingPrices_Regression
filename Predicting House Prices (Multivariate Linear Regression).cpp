@@ -8,18 +8,13 @@ int main()
 	int m, h, n,l=0;
 	cin>>n>>m;
 	float in[m][n+2];
+	float s0=0, s1=0, s2=0, min , max, mean, range,cf=0.0,v=100.0 ;
 	float p[n+1]; //parameter vector
 	r(i,0,m)
 		r(j,1,n+2)
 			cin>>in[i][j];
-	//initializing feature no. 0 to 0  
-	r(i,0,m)
-		in[i][0]=1;	
-	//initializing parameter vector
-	r(i,0,n+1)
-		p[i]=-1.1;
-	//mean normalization
-	r(i,1,n+1)
+	//mean normalization under construction
+	/*r(i,1,n+1)
 	{
 		s0=0;
 		min = max = in[0][i];
@@ -35,22 +30,28 @@ int main()
 		range = max - min;
 		r(j,0,m)
 			in[j][i] = (in[j][i] - mean)/range;
-	}	
-	float s1=0,s2=0;
-	float alpha = 0.1; //alpha = learning rate		
+	}*/		
+	r(i,0,m)
+		in[i][0]=1;		
+	r(i,0,n+1)
+		p[i]=-1.1;	
+	float alpha = 0.01; //alpha = learning rate		
 	//linear regression using gradient descent
-	while(l<100)
+	while(abs(cf - v)>0.0001)
 	{
+		v=cf;
 		r(k,0,n+1)
 		{
-			s2=0;
+			s2=0,cf=0;
 			r(i,0,m)
 			{
 				s1=0;
 				r(j,0,n+1)
 					s1 += p[j] * in[i][j];		
 				s2 += (s1 - in[i][n+1])*in[i][k];
+				cf += (s1 - in[i][n+1])*(s1 - in[i][n+1]); //cost function
 			}
+			cf = cf / (2 * m);
 			p[k]=p[k] - ((alpha/m)*s2);
 		}
 		l++;
@@ -69,4 +70,3 @@ int main()
 		cout<<s1<<endl;
 	}
 }
-
