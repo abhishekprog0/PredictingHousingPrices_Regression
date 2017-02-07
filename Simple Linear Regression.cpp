@@ -36,8 +36,8 @@ int main()
 		p2 = k2;
 		for(int i = 0; i < m; i++) 
 		{
-			s1 = s1 + (k1 + k2 * a1[i] - b[i]);
-			s2 = s2 + (k1 + k2 * a1[i] - b[i]) * a1[i];		
+			s1 = s1 + (k1 + k2 * feature_1[i] - target_output[i]);
+			s2 = s2 + (k1 + k2 * feature_1[i] - target_output[i]) * feature_1[i];		
 		}
 		s1 = s1 / m;
 		s2 = s2 / m;
