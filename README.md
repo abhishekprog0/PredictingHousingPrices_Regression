@@ -11,6 +11,8 @@ There are N feature variables of M training input data. For each of the M traini
 
 The task of this project is to build a model which can successfully predict the prize of house corresponding to new data involving N feature variables.
 
-*The project code passed all the test cases provided by Hackerrank on the problem : https://www.hackerrank.com/challenges/predicting-house-prices.*
+*The project code passed all the test cases provided by Hackerrank on an Expert level problem : https://www.hackerrank.com/challenges/predicting-house-prices.*
+
+Added a comment line on the code for **Regularization of each feature variables using Mean Normalization**.
 
 Things to improve in the code : Implementing **Stochastic gradient descent** and/or **stop when the improvement drops below a threshold** for improving the termination condition to lower the time complexity and performance efficiency of prediction
