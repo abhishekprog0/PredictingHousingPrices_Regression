@@ -30,7 +30,7 @@ int main()
 	//linear regression using gradient descent
 	cout<< "Iterations for parameters: "<<endl;
 	//cout<<"m         c"<<endl;		
-	while(abs(p2 - k2) >= 0.000001)
+	while(abs(p2, k2) >= 0.000001 && abs(p1, k1) >= 0.000001)
 	{
 		p1 = k1;
 		p2 = k2;
